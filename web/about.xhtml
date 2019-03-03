@@ -6,15 +6,13 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-    <title>#{home.getTitle()}</title>
+    <title>#{about.getTitle()}</title>
     <link type="text/css" rel="stylesheet" href="resources/css/app.css" />
 </h:head>
 <h:body>
     <f:view>
         <div>
-            <h1> Hasan Genc </h1>
-            <h:outputLabel value="#{home.getContent()}" />
-            <h:link value="About Page" outcome="about" />
+            <h1> My name is #{about.getName()} </h1>
         </div>
     </f:view>
 

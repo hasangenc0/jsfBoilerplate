@@ -4,13 +4,21 @@ import javax.faces.bean.ManagedBean;
 
 @ManagedBean(name = "home", eager = true)
 public class Home {
+    String title, content;
+
     public Home() {
 
-        System.out.println("Home started!");
+        this.title = "Hasan Genc Website";
+        this.content = "Welcome to my site";
     }
 
-    public String getMessage() {
+    public String getContent() {
 
-        return "Hasan Home";
+        return this.content;
+    }
+
+    public String getTitle() {
+
+        return this.title;
     }
 }
