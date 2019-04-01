@@ -10,13 +10,13 @@
     <link type="text/css" rel="stylesheet" href="resources/css/app.css" />
 </h:head>
 <h:body>
-    <f:view>
-        <div>
-            <h1> Hasan Genc </h1>
-            <h:outputLabel value="#{home.getContent()}" />
-            <h:link value="About Page" outcome="about" />
-        </div>
-    </f:view>
+
+    <div>
+        <h1> Hasan Genc </h1>
+        <h:outputLabel value="#{home.getContent()}" />
+        <h:link value="About" outcome="#{navigator.about()}" />
+        <h:link value="Login" outcome="#{navigator.login()}" />
+    </div>
 
 </h:body>
 </html>

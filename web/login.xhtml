@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xml:lang="en" lang="en">
+<head>
+    <title>Login Page</title>
+    <link type="text/css" rel="stylesheet" href="resources/css/app.css" />
+</head>
+<body class="container-fluid">
+
+    <h:outputLabel value="#{!login.error.equals(null) ? login.error: ''}" />
+
+    <br/>
+
+    <h:outputLabel value="#{login.action()}" />
+
+    <h:form id="form">
+
+        <h:inputText value="#{login.username}" />
+        <h:inputText value="#{login.password}" />
+
+        <h:commandButton action="#{login.action}" value="login" actionListener="#{login.eventHandler}">
+            <f:setPropertyActionListener target="#{login.event}" value="signIn"/>
+            <f:setPropertyActionListener value="login" target="#{login.action}" />
+        </h:commandButton>
+
+        <h:commandButton action="#{login.action}" actionListener="#{login.eventHandler}" value="register">
+            <f:setPropertyActionListener value="signUp" target="#{login.event}" />
+            <f:setPropertyActionListener value="register" target="#{login.action}" />
+        </h:commandButton>
+
+    </h:form>
+
+</body>
+</html>

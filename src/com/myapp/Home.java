@@ -1,4 +1,4 @@
-package main.homepage;
+package com.myapp;
 
 import javax.faces.bean.ManagedBean;
 
